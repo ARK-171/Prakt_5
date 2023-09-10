@@ -20,10 +20,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SensorManager sensorManager =
-                (SensorManager)getSystemService(Context.SENSOR_SERVICE);
-        accelerometerSensor = sensorManager
-                .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        sensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
+        accelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         azimuthTextView = findViewById(R.id.textViewAzimuth);
         pitchTextView = findViewById(R.id.textViewPitch);
         rollTextView = findViewById(R.id.textViewRoll);
